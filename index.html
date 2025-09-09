@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+
+      /* Animated gradient background */
+      background: linear-gradient(-45deg, #ff6a00, #ee0979, #2575fc, #6a11cb);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      color: #fff;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(15px);
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .container h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .container p {
+      font-size: 1rem;
+      margin-bottom: 25px;
+      color: #f1f1f1;
+    }
+
+    input {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      outline: none;
+      font-size: 1rem;
+      width: 100%;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: #ddd;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      width: 100%;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    .output-section {
+      margin-top: 25px;
+    }
+
+    .output-section h2 {
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    #qrBox {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #qrImage {
+      max-width: 220px;
+      max-height: 220px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✨ QR Code Generator ✨</h1>
+    <p>Enter a link below to create your custom QR code instantly.</p>
+    
+    <input type="text" id="linkInput" placeholder="https://example.com">
+    <button onclick="generateQR()">Generate QR</button>
+
+    <div class="output-section">
+      <h2>Your QR Code:</h2>
+      <div id="qrBox">
+        <img id="qrImage" src="" alt="QR Code will appear here">
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script>
+    function generateQR() {
+      const link = document.getElementById("linkInput").value;
+      const qrImage = document.getElementById("qrImage");
+
+      if (link.trim() === "") {
+        alert("⚠️ Please enter a valid URL!");
+        return;
+      }
+
+      // Generate QR code
+      QRCode.toDataURL(link, { width: 220 }, function (err, url) {
+        if (err) console.error(err);
+        qrImage.src = url;
+      });
+    }
+  </script>
+</body>
+</html>
