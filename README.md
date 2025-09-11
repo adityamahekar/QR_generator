@@ -3,7 +3,7 @@
 <link rel=> QR Generator</link>
  <h1>QR Generator</h1>
 <hr>
-  <p>A full-stack web application to manage blood donors and requests efficiently. Built with <strong>Node.js</strong>, <strong>Express.js</strong>, <strong>EJS</strong>, and <strong>PostgreSQL</strong>.</p>
+  <p>This QR Code Generator uses HTML, CSS, and JavaScript with the QRCode.js library. It demonstrates frontend development skills including responsive design, DOM manipulation, and API integration. The project showcases UI/UX principles with clean visuals and user input validation.</p>
   <hr>
   <p>
     <span>Link:</span>
