@@ -12,7 +12,7 @@
   <hr>
 
 
-# 🏫 Government School Website
+/*# 🏫 Government School Website
 
 A modern, responsive HTML template for a government school website.  
 Built using **HTML**, **CSS**, and **JavaScript** with support for fast development using **Vite**.
@@ -45,4 +45,4 @@ Check out the [Live Demo](https://your-live-site-link.com)
 
 ```bash
 git clone https://github.com/your-username/school-website.git
-cd school-website
+cd school-website */
