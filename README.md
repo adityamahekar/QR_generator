@@ -1,15 +1,40 @@
+# 🔲 QR Generator  
 
+A simple **QR Code Generator** built using **HTML, CSS, and JavaScript** with the **QRCode.js** library.  
+This project demonstrates frontend development skills including **responsive design, DOM manipulation, API integration, and user input validation**.  
 
-<link rel=> QR Generator</link>
- <h1>QR Generator</h1>
-<hr>
-  <p>This QR Code Generator uses HTML, CSS, and JavaScript with the QRCode.js library. It demonstrates frontend development skills including responsive design, DOM manipulation, and API integration. The project showcases UI/UX principles with clean visuals and user input validation.</p>
-  <hr>
-  <p>
-    <span>Link:</span>
-    <span><a href="https://adityamahekar.github.io/QR_generator/">QR Generator</a></span>
-  </p>
-  <hr>
+---
 
+## 🌐 Live Demo  
+🔗 [QR Generator](https://adityamahekar.github.io/QR_generator/)  
 
+---
 
+## 🚀 Features  
+- ✏️ Generate QR Codes from user input  
+- 📱 Responsive design for desktop and mobile  
+- 🎨 Clean and minimal UI/UX  
+- ⚡ Real-time QR code generation using JavaScript  
+- 🛠️ Powered by **QRCode.js** library  
+
+---
+
+## 🛠️ Tech Stack  
+- **Frontend**: HTML, CSS, JavaScript  
+- **Library**: [QRCode.js](https://github.com/davidshimjs/qrcodejs)  
+- **Deployment**: GitHub Pages  
+
+---
+
+## 📷 Gallery  
+
+| Input Field | QR Code Generated |
+|-------------|------------------|
+| ![Link Input](qr1.png) | ![QR Code](qr2.png) |
+
+---
+
+## 📌 How to Run Locally  
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/adityamahekar/QR_generator.git
